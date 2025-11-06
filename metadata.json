@@ -1,0 +1,5 @@
+{
+  "name": "photoKo",
+  "description": "An internal application for designers and agencies to generate coherent, realistic photographic images for websites using Gemini. It allows configuring a project, generating a complete set, selecting the best images, editing them with AI, and downloading them optimized in a ZIP file.",
+  "requestFramePermissions": []
+}
