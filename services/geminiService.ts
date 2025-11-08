@@ -3,7 +3,7 @@ import type { AspectRatio } from '../types';
 
 if (!process.env.API_KEY) {
     console.warn("API_KEY environment variable not set. Using a placeholder.");
-    process.env.API_KEY = import.metA.env.VITE_API_KEY;
+    process.env.API_KEY = import.meta.env.VITE_API_KEY;
 }
 
 const ai = new GoogleGenAI({ apiKey: process.env.API_KEY as string });
