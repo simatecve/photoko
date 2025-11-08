@@ -40,18 +40,18 @@ export const EditModal: React.FC<EditModalProps> = ({ image, onClose, onUpdate }
 
   return (
     <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 backdrop-blur-sm p-4" onClick={handleOverlayClick}>
-      <div className="bg-[#0F172A] border border-white/10 rounded-2xl shadow-2xl p-8 w-full max-w-4xl flex flex-col md:flex-row gap-8 animate-fade-in" onClick={(e) => e.stopPropagation()}>
+      <div className="bg-white dark:bg-[#0F172A] border border-slate-200 dark:border-white/10 rounded-2xl shadow-2xl p-8 w-full max-w-4xl flex flex-col md:flex-row gap-8 animate-fade-in" onClick={(e) => e.stopPropagation()}>
         <div className="w-full md:w-1/2 flex flex-col">
-            <h2 className="text-2xl font-bold text-white mb-4">Editar Imagen</h2>
-            <p className="text-slate-400 mb-6">Describe los cambios que quieres hacer. Por ejemplo: "añade un filtro retro" o "cambia el cielo a un atardecer".</p>
+            <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">Editar Imagen</h2>
+            <p className="text-slate-500 dark:text-slate-400 mb-6">Describe los cambios que quieres hacer. Por ejemplo: "añade un filtro retro" o "cambia el cielo a un atardecer".</p>
             <textarea
                 value={prompt}
                 onChange={(e) => setPrompt(e.target.value)}
                 placeholder="Ej: Haz que la imagen sea en blanco y negro..."
-                className="w-full h-32 p-3 bg-slate-800/50 border border-white/10 rounded-lg text-slate-200 focus-ring transition"
+                className="w-full h-32 p-3 bg-slate-100 dark:bg-slate-800/50 border border-slate-300 dark:border-white/10 rounded-lg text-slate-900 dark:text-slate-200 focus-ring transition"
                 disabled={isLoading}
             />
-            {error && <p className="text-red-400 mt-2 text-sm">{error}</p>}
+            {error && <p className="text-red-500 dark:text-red-400 mt-2 text-sm">{error}</p>}
             <div className="flex gap-4 mt-6">
                 <Button onClick={handleEdit} disabled={isLoading || !prompt.trim()}>
                     {isLoading ? <><Spinner /> Aplicando...</> : 'Aplicar Cambios'}

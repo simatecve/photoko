@@ -5,6 +5,12 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>photoKo - Generador de Imágenes con IA</title>
+    <script>
+        // Setup Tailwind CSS for class-based dark mode
+        tailwind.config = {
+            darkMode: 'class',
+        };
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,7 +44,7 @@
 }
 </script>
 </head>
-<body class="bg-[#0B1220] text-[#E5E7EB]">
+<body class="bg-slate-100 text-slate-800 dark:bg-[#0B1220] dark:text-[#E5E7EB] transition-colors duration-300">
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
 </body>
